@@ -3,6 +3,7 @@ const { Sequelize } = require("sequelize")
 //Liberia dotenv
 const dotenv = require("dotenv")
 
+//APUNTA A LA RAIZ DEL PROYECTO
 dotenv.config({path:"./config.env"})
 
 const sequelize = new Sequelize ({
@@ -12,6 +13,7 @@ const sequelize = new Sequelize ({
     port: 5432,
     database: process.env.DB,
     dialect: "postgres",
+    logging:false
 })
 
 module.exports = {sequelize}
